@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="toggle-dark"><span id="dark-icon">🌙</span></button>
+    <button id="test-notif" class="test-btn">🔔 Tes Notifikasi</button>
+    <div class="layout-container">
+      <!-- KIRI: Judul & Input -->
+      <div class="left-panel">
+        <h1>📝My To-Do List</h1>
+        <form id="task-form" autocomplete="off">
+          <input id="task-input" type="text" placeholder="Tugas..." required />
+          <input id="task-date" type="datetime-local" />
+          <button type="submit">Add</button>
+        </form>
+      </div>
+
+      <!-- TENGAH: Filter & List -->
+      <div class="center-panel">
+        <div class="filters">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="active">Active</button>
+          <button data-filter="completed">Completed</button>
+        </div>
+        <ul id="task-list"></ul>
+        <div class="clear-container">
+          <button id="clear-all" class="clear-btn">Clear All</button>
+        </div>
+      </div>
+
+      <!-- KANAN: History -->
+      <div class="right-panel history-container">
+        <h2>📜 History Aktivitas</h2>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
